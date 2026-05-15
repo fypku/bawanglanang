@@ -1,2 +1,0 @@
-# bawanglanang
-Web Bawang Lanang
