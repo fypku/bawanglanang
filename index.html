@@ -1,1099 +1,1103 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Bawang Lanang Lokal Premium</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-/* =========================
-RESET
-========================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'Poppins',sans-serif;
-  color:#333;
-  overflow-x:hidden;
-  background:#fff;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px;
-}
-
-/* =========================
-NAVBAR
-========================= */
-
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
-  z-index:999;
-  box-shadow:0 2px 20px rgba(0,0,0,0.08);
-}
-
-.navbar .container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:15px 20px;
-}
-
-.logo{
-  font-size:1.6rem;
-  font-weight:900;
-  color:#1f5f1f;
-}
-
-.logo span{
-  color:#d4a017;
-}
-
-.nav-links{
-  display:flex;
-  gap:28px;
-  list-style:none;
-}
-
-.nav-links a{
-  font-weight:600;
-  color:#444;
-  transition:0.3s;
-}
-
-.nav-links a:hover{
-  color:#1f5f1f;
-}
-
-.nav-cta{
-  background:linear-gradient(135deg,#1f5f1f,#347834);
-  color:#fff !important;
-  padding:10px 22px;
-  border-radius:50px;
-}
-
-.hamburger{
-  display:none;
-  font-size:1.5rem;
-  cursor:pointer;
-}
-
-/* =========================
-HERO
-========================= */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding-top:100px;
-  background:
-  linear-gradient(135deg,#f6fff1 0%,#e7f7d8 50%,#d7efc2 100%);
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:'';
-  position:absolute;
-  width:700px;
-  height:700px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(31,95,31,0.09),transparent 70%);
-  top:-300px;
-  right:-200px;
-}
-
-.hero .container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.hero-badge{
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  background:#e9f8dc;
-  color:#1f5f1f;
-  padding:10px 20px;
-  border-radius:50px;
-  font-size:0.9rem;
-  font-weight:700;
-  margin-bottom:20px;
-}
-
-.hero h1{
-  font-size:3.2rem;
-  line-height:1.2;
-  margin-bottom:20px;
-  color:#143814;
-  font-weight:900;
-}
-
-.hero h1 span{
-  color:#d4a017;
-}
-
-.hero p{
-  font-size:1.1rem;
-  color:#666;
-  margin-bottom:35px;
-  line-height:1.8;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,#1f5f1f,#347834);
-  color:#fff;
-  padding:16px 36px;
-  border-radius:50px;
-  font-weight:700;
-  transition:0.3s;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-}
-
-.btn-primary:hover{
-  transform:translateY(-3px);
-}
-
-.btn-secondary{
-  border:2px solid #1f5f1f;
-  color:#1f5f1f;
-  padding:16px 36px;
-  border-radius:50px;
-  font-weight:700;
-  transition:0.3s;
-}
-
-.btn-secondary:hover{
-  background:#1f5f1f;
-  color:#fff;
-}
-
-.hero-stats{
-  margin-top:40px;
-  display:flex;
-  gap:40px;
-}
-
-.stat-item h3{
-  font-size:2rem;
-  color:#1f5f1f;
-  font-weight:900;
-}
-
-.stat-item p{
-  margin:0;
-  font-size:0.9rem;
-}
-
-/* =========================
-IMAGE HERO
-========================= */
-
-.hero-image{
-  position:relative;
-}
-
-.hero-image-wrapper{
-  position:relative;
-}
-
-.main-img{
-  width:100%;
-  border-radius:30px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.15);
-}
-
-.hero-product-badge{
-  position:absolute;
-  top:20px;
-  right:20px;
-  background:#d62828;
-  color:#fff;
-  padding:14px 18px;
-  border-radius:16px;
-  font-weight:800;
-  text-align:center;
-  line-height:1.4;
-  box-shadow:0 10px 25px rgba(214,40,40,0.3);
-}
-
-.floating-card{
-  position:absolute;
-  background:#fff;
-  border-radius:18px;
-  padding:15px 18px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.12);
-}
-
-.card-1{
-  top:12%;
-  left:-25px;
-}
-
-.card-2{
-  bottom:12%;
-  right:-20px;
-}
-
-.icon-circle{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:1.2rem;
-}
-
-.local-highlight{
-  margin-top:20px;
-  background:#edf9e6;
-  color:#1f5f1f;
-  padding:12px 18px;
-  border-radius:50px;
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  font-weight:700;
-}
-
-.grosir-box{
-  margin-top:20px;
-  background:#fff;
-  border:2px dashed #1f5f1f;
-  border-radius:20px;
-  padding:18px;
-  text-align:center;
-}
-
-.grosir-box h4{
-  color:#1f5f1f;
-  margin-bottom:8px;
-}
-
-.grosir-box p{
-  margin:0;
-  font-size:0.92rem;
-}
-
-.hero-marketplace{
-  margin-top:20px;
-  background:linear-gradient(135deg,#1f5f1f,#347834);
-  padding:25px;
-  border-radius:24px;
-  color:#fff;
-}
-
-.marketplace-link{
-  display:block;
-  background:#fff;
-  color:#1f5f1f;
-  padding:14px 18px;
-  border-radius:14px;
-  font-weight:700;
-  margin-top:15px;
-  word-break:break-all;
-}
-
-/* =========================
-SECTION
-========================= */
-
-section{
-  padding:100px 0;
-}
-
-.section-header{
-  text-align:center;
-  margin-bottom:60px;
-}
-
-.section-tag{
-  display:inline-block;
-  padding:8px 18px;
-  border-radius:50px;
-  background:#edf9e6;
-  color:#1f5f1f;
-  font-weight:700;
-  margin-bottom:18px;
-}
-
-.section-header h2{
-  font-size:2.5rem;
-  color:#143814;
-  margin-bottom:15px;
-  font-weight:900;
-}
-
-.section-header p{
-  max-width:700px;
-  margin:auto;
-  color:#666;
-}
-
-/* =========================
-BENEFITS
-========================= */
-
-.benefits-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-
-.benefit-card{
-  background:#fff;
-  border-radius:24px;
-  padding:35px;
-  border:1px solid #edf2e8;
-  transition:0.3s;
-  text-align:center;
-}
-
-.benefit-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 50px rgba(0,0,0,0.08);
-}
-
-.benefit-icon{
-  width:70px;
-  height:70px;
-  margin:auto;
-  border-radius:20px;
-  background:linear-gradient(135deg,#1f5f1f,#347834);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:1.5rem;
-  margin-bottom:20px;
-}
-
-.benefit-card h3{
-  margin-bottom:12px;
-  color:#143814;
-}
-
-.benefit-card p{
-  color:#666;
-  line-height:1.8;
-}
-
-/* =========================
-KHASIAT
-========================= */
-
-.features{
-  background:#f8fff3;
-}
-
-.features-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
-}
-
-.feature-item{
-  background:#fff;
-  border-radius:22px;
-  padding:30px 25px;
-  text-align:center;
-  transition:0.3s;
-  border:1px solid #eef5ea;
-}
-
-.feature-item:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.08);
-}
-
-.feature-emoji{
-  font-size:2.5rem;
-  margin-bottom:15px;
-}
-
-.feature-item h3{
-  margin-bottom:10px;
-  color:#143814;
-}
-
-.feature-item p{
-  color:#666;
-  font-size:0.95rem;
-}
-
-/* =========================
-CTA
-========================= */
-
-.cta{
-  background:
-  linear-gradient(135deg,#d4a017,#e8b941);
-  text-align:center;
-  color:#fff;
-}
-
-.cta h2{
-  font-size:2.7rem;
-  margin-bottom:20px;
-}
-
-.cta p{
-  max-width:700px;
-  margin:auto auto 35px;
-  font-size:1.1rem;
-}
-
-.btn-cta{
-  background:#fff;
-  color:#1f5f1f;
-  padding:18px 45px;
-  border-radius:50px;
-  font-weight:800;
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  transition:0.3s;
-}
-
-.btn-cta:hover{
-  transform:translateY(-3px);
-}
-
-/* =========================
-FOOTER
-========================= */
-
-.footer{
-  background:#151515;
-  color:#bbb;
-  padding:70px 0 30px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:40px;
-  margin-bottom:40px;
-}
-
-.footer h4{
-  color:#fff;
-  margin-bottom:20px;
-}
-
-.footer ul{
-  list-style:none;
-}
-
-.footer ul li{
-  margin-bottom:10px;
-}
-
-.footer ul li a{
-  color:#bbb;
-}
-
-.footer-bottom{
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding-top:20px;
-  font-size:0.9rem;
-}
-
-/* =========================
-WHATSAPP FLOAT
-========================= */
-
-.wa-float{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  width:65px;
-  height:65px;
-  background:#25D366;
-  color:#fff;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.8rem;
-  box-shadow:0 10px 30px rgba(37,211,102,0.4);
-  z-index:999;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:992px){
-
-  .hero .container{
-    grid-template-columns:1fr;
-  }
-
-  .hero-content{
-    text-align:center;
-  }
-
-  .hero-buttons,
-  .hero-stats{
-    justify-content:center;
-  }
-
-  .benefits-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .features-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media(max-width:768px){
-
-  .hamburger{
-    display:block;
-  }
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    padding:20px;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .hero h1{
-    font-size:2.2rem;
-  }
-
-  .benefits-grid,
-  .features-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .floating-card{
-    display:none;
-  }
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bawang Lanang Lokal Premium</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fff;
+      color:#333;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    .container{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+      padding:0 20px;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:999;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .navbar .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 20px;
+    }
+
+    .logo{
+      font-size:1.8rem;
+      font-weight:900;
+      color:#2d5016;
+    }
+
+    .logo span{
+      color:#d7a021;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      list-style:none;
+      align-items:center;
+    }
+
+    .nav-links a{
+      font-weight:600;
+      color:#444;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#2d5016;
+    }
+
+    .nav-btn{
+      background:linear-gradient(135deg,#2d5016,#4d7a2d);
+      color:#fff !important;
+      padding:10px 24px;
+      border-radius:50px;
+    }
+
+    .hamburger{
+      display:none;
+      font-size:1.5rem;
+      cursor:pointer;
+      color:#2d5016;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      padding-top:130px;
+      padding-bottom:80px;
+      background:
+      linear-gradient(135deg,#f9fff4 0%,#eef8df 50%,#d9efb8 100%);
+      overflow:hidden;
+    }
+
+    .hero .container{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:60px;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(45,80,22,0.1);
+      color:#2d5016;
+      padding:10px 20px;
+      border-radius:50px;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-size:3.5rem;
+      line-height:1.2;
+      font-weight:900;
+      color:#18350a;
+      margin-bottom:20px;
+    }
+
+    .hero h1 span{
+      color:#d7a021;
+    }
+
+    .hero p{
+      font-size:1.1rem;
+      color:#666;
+      margin-bottom:30px;
+      line-height:1.8;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-bottom:35px;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#2d5016,#4d7a2d);
+      color:#fff;
+      padding:16px 35px;
+      border-radius:50px;
+      font-weight:700;
+      transition:0.3s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow:0 10px 30px rgba(45,80,22,0.3);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-secondary{
+      border:2px solid #2d5016;
+      color:#2d5016;
+      padding:16px 35px;
+      border-radius:50px;
+      font-weight:700;
+      transition:0.3s;
+      background:#fff;
+    }
+
+    .btn-secondary:hover{
+      background:#2d5016;
+      color:#fff;
+    }
+
+    .hero-stats{
+      display:flex;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .stat h3{
+      font-size:2rem;
+      color:#2d5016;
+      font-weight:900;
+    }
+
+    .stat p{
+      margin:0;
+      color:#666;
+      font-size:0.9rem;
+    }
+
+    /* ================= HERO IMAGE ================= */
+
+    .hero-image-wrapper{
+      position:relative;
+    }
+
+    .main-img{
+      border-radius:30px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    .hero-product-badge{
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:#d62828;
+      color:#fff;
+      padding:12px 18px;
+      border-radius:16px;
+      font-size:0.9rem;
+      font-weight:800;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(214,40,40,0.3);
+    }
+
+    .floating-card{
+      position:absolute;
+      background:#fff;
+      border-radius:18px;
+      padding:15px 20px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .card-1{
+      top:15%;
+      left:-30px;
+    }
+
+    .card-2{
+      bottom:15%;
+      right:-20px;
+    }
+
+    .icon-circle{
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#2d5016,#4d7a2d);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.1rem;
+    }
+
+    .floating-card h4{
+      font-size:0.9rem;
+      color:#2d5016;
+      margin-bottom:2px;
+    }
+
+    .floating-card p{
+      margin:0;
+      font-size:0.75rem;
+    }
+
+    .local-highlight{
+      margin-top:20px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(45,80,22,0.1);
+      color:#2d5016;
+      padding:10px 18px;
+      border-radius:50px;
+      font-weight:700;
+    }
+
+    .grosir-box{
+      margin-top:20px;
+      background:#fff;
+      border:2px dashed #2d5016;
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .grosir-box h4{
+      color:#2d5016;
+      margin-bottom:8px;
+    }
+
+    .hero-marketplace{
+      margin-top:20px;
+      background:linear-gradient(135deg,#1f5f1f,#2d7a2d);
+      padding:20px;
+      border-radius:22px;
+      color:#fff;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .hero-marketplace h4{
+      margin-bottom:10px;
+    }
+
+    .marketplace-link{
+      display:block;
+      background:#fff;
+      color:#2d5016;
+      padding:14px;
+      border-radius:14px;
+      font-weight:700;
+      word-break:break-all;
+      margin-top:10px;
+    }
+
+    /* ================= SECTION ================= */
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-header{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-tag{
+      display:inline-block;
+      background:rgba(45,80,22,0.1);
+      color:#2d5016;
+      padding:8px 18px;
+      border-radius:50px;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .section-header h2{
+      font-size:2.5rem;
+      color:#18350a;
+      margin-bottom:15px;
+    }
+
+    .section-header p{
+      max-width:700px;
+      margin:auto;
+      color:#666;
+    }
+
+    /* ================= BENEFITS ================= */
+
+    .benefits-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    .benefit-card{
+      background:#fff;
+      border-radius:24px;
+      padding:35px;
+      text-align:center;
+      border:1px solid #edf4e1;
+      transition:0.3s;
+      box-shadow:0 5px 20px rgba(0,0,0,0.04);
+    }
+
+    .benefit-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .benefit-icon{
+      width:75px;
+      height:75px;
+      margin:auto;
+      border-radius:20px;
+      background:linear-gradient(135deg,#2d5016,#4d7a2d);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.7rem;
+      margin-bottom:20px;
+    }
+
+    .benefit-card h3{
+      margin-bottom:10px;
+      color:#18350a;
+    }
+
+    .benefit-card p{
+      color:#666;
+      font-size:0.95rem;
+    }
+
+    /* ================= KHASIAT ================= */
+
+    .khasiat{
+      background:#f8fff1;
+    }
+
+    .khasiat-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:25px;
+    }
+
+    .khasiat-item{
+      background:#fff;
+      border-radius:20px;
+      padding:30px 20px;
+      text-align:center;
+      border:1px solid #e8f5d8;
+      transition:0.3s;
+    }
+
+    .khasiat-item:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .khasiat-item .emoji{
+      font-size:2.3rem;
+      margin-bottom:15px;
+    }
+
+    .khasiat-item h4{
+      color:#18350a;
+      margin-bottom:10px;
+    }
+
+    .khasiat-item p{
+      color:#666;
+      font-size:0.9rem;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta{
+      background:linear-gradient(135deg,#d7a021,#c58e12);
+      text-align:center;
+      color:#fff;
+    }
+
+    .cta h2{
+      font-size:2.8rem;
+      margin-bottom:15px;
+    }
+
+    .cta p{
+      margin-bottom:30px;
+      font-size:1.1rem;
+    }
+
+    .btn-cta{
+      background:#fff;
+      color:#c58e12;
+      padding:18px 40px;
+      border-radius:50px;
+      font-weight:800;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition:0.3s;
+    }
+
+    .btn-cta:hover{
+      transform:translateY(-3px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#111;
+      color:#aaa;
+      padding:60px 0 30px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    footer h4{
+      color:#fff;
+      margin-bottom:15px;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    footer ul li{
+      margin-bottom:10px;
+    }
+
+    .footer-social{
+      display:flex;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .footer-social a{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#222;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:0.3s;
+    }
+
+    .footer-social a:hover{
+      background:#2d5016;
+      color:#fff;
+    }
+
+    .footer-bottom{
+      text-align:center;
+      border-top:1px solid #222;
+      padding-top:20px;
+      font-size:0.9rem;
+    }
+
+    /* ================= WHATSAPP ================= */
+
+    .wa-float{
+      position:fixed;
+      right:25px;
+      bottom:25px;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      z-index:999;
+      box-shadow:0 10px 30px rgba(37,211,102,0.4);
+      animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+      0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0.5);
+      }
+      70%{
+        box-shadow:0 0 0 18px rgba(37,211,102,0);
+      }
+      100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:1024px){
+
+      .hero .container{
+        grid-template-columns:1fr;
+      }
+
+      .benefits-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .khasiat-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .hamburger{
+        display:block;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        padding:20px;
+        display:none;
+      }
+
+      .nav-links.active{
+        display:flex;
+      }
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero h1{
+        font-size:2.3rem;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      .hero-stats{
+        justify-content:center;
+      }
+
+      .benefits-grid{
+        grid-template-columns:1fr;
+      }
+
+      .khasiat-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .floating-card{
+        display:none;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-NAVBAR
-========================= -->
+  <!-- ================= NAVBAR ================= -->
 
-<nav class="navbar">
-  <div class="container">
+  <nav class="navbar">
+    <div class="container">
 
-    <a href="#" class="logo">
-      Bawang<span>Lanang</span>
-    </a>
+      <div class="logo">
+        Bawang<span>Lanang</span>
+      </div>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#manfaat">Manfaat</a></li>
-      <li><a href="#khasiat">Khasiat</a></li>
-      <li><a href="#marketplace">Marketplace</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-      <li><a href="https://linktr.ee/grosirbawanglanang" target="_blank" class="nav-cta">Pesan Sekarang</a></li>
-    </ul>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#manfaat">Manfaat</a></li>
+        <li><a href="#khasiat">Khasiat</a></li>
+        <li><a href="#marketplace">Marketplace</a></li>
+        <li><a href="#kontak" class="nav-btn">Pesan Sekarang</a></li>
+      </ul>
 
-    <div class="hamburger" onclick="toggleNav()">
-      <i class="fas fa-bars"></i>
+      <div class="hamburger" onclick="toggleNav()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <i class="fas fa-award"></i>
+          Produk Herbal Premium Lokal
+        </div>
+
+        <h1>
+          Bawang Tunggal
+          <span>(Bawang Lanang)</span>
+          Lokal Berkualitas
+        </h1>
+
+        <p>
+          Bawang lanang pilihan langsung dari petani lokal Indonesia.
+          Kering, utuh, beraroma tajam, tanpa bahan pengawet,
+          cocok untuk kesehatan keluarga dan usaha kuliner.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="https://linktr.ee/grosirbawanglanang"
+             target="_blank"
+             class="btn-primary">
+            <i class="fas fa-cart-shopping"></i>
+            Lihat Marketplace
+          </a>
+
+          <a href="#manfaat" class="btn-secondary">
+            Khasiat & Manfaat
+          </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Produk Lokal</p>
+          </div>
+
+          <div class="stat">
+            <h3>Premium</h3>
+            <p>Kualitas Terbaik</p>
+          </div>
+
+          <div class="stat">
+            <h3>Fresh</h3>
+            <p>Langsung Petani</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <div class="hero-image-wrapper">
+
+          <!-- GANTI DENGAN FOTO BAWANG ANDA -->
+          <!-- <img
+            src="images/bawang-lanang.jpg"
+            alt="Bawang Lanang Lokal"
+            class="main-img"
+          > -->
+
+          <div class="hero-product-badge">
+            100%<br>
+            PRODUK LOKAL
+          </div>
+
+          <div class="floating-card card-1">
+            <div class="icon-circle">
+              <i class="fas fa-leaf"></i>
+            </div>
+
+            <div>
+              <h4>Alami</h4>
+              <p>Tanpa Pengawet</p>
+            </div>
+          </div>
+
+          <div class="floating-card card-2">
+            <div class="icon-circle">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+
+            <div>
+              <h4>Pengiriman Cepat</h4>
+              <p>Grosir & Eceran</p>
+            </div>
+          </div>
+
+          <div class="local-highlight">
+            <i class="fas fa-seedling"></i>
+            Langsung dari Petani Lokal
+          </div>
+
+          <div class="grosir-box">
+            <h4>🧄 Tersedia Grosir & Eceran</h4>
+
+            <p>
+              Cocok untuk rumah tangga,
+              reseller,
+              usaha kuliner,
+              dan kebutuhan harian.
+            </p>
+          </div>
+
+          <div class="hero-marketplace" id="marketplace">
+
+            <h4>🛒 Lihat Marketplace Kami</h4>
+
+            <a
+              href="https://linktr.ee/grosirbawanglanang"
+              target="_blank"
+              class="marketplace-link"
+            >
+              https://linktr.ee/grosirbawanglanang
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
-</nav>
+  </section>
 
-<!-- =========================
-HERO
-========================= -->
+  <!-- ================= BENEFITS ================= -->
 
-<section class="hero">
+  <section id="manfaat">
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-content">
+      <div class="section-header">
 
-<div class="hero-badge">
-  <i class="fas fa-award"></i>
-  Produk Lokal Berkualitas
-</div>
+        <div class="section-tag">
+          🌿 Manfaat
+        </div>
 
-<h1>
-Bawang Tunggal <span>(Bawang Lanang)</span> Lokal Premium
-</h1>
+        <h2>
+          Khasiat Bawang Lanang untuk Kesehatan
+        </h2>
 
-<p>
-Bawang lanang pilihan petani lokal berkualitas tinggi,
-kering, utuh, alami tanpa pengawet,
-cocok untuk konsumsi harian, usaha kuliner,
-dan kebutuhan kesehatan keluarga.
-</p>
+        <p>
+          Mengandung antioksidan, allicin,
+          dan senyawa alami yang baik untuk kesehatan tubuh.
+        </p>
 
-<div class="hero-buttons">
+      </div>
 
-<a href="https://linktr.ee/grosirbawanglanang"
-target="_blank"
-class="btn-primary">
-<i class="fas fa-cart-shopping"></i>
-Lihat Marketplace
-</a>
+      <div class="benefits-grid">
 
-<a href="#manfaat" class="btn-secondary">
-Pelajari Khasiat
-</a>
+        <div class="benefit-card">
 
-</div>
+          <div class="benefit-icon">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
 
-<div class="hero-stats">
+          <h3>Menjaga Jantung</h3>
 
-<div class="stat-item">
-<h3>100%</h3>
-<p>Produk Lokal</p>
-</div>
+          <p>
+            Membantu menjaga kesehatan jantung
+            dan sirkulasi darah secara alami.
+          </p>
 
-<div class="stat-item">
-<h3>Premium</h3>
-<p>Kualitas Terbaik</p>
-</div>
+        </div>
 
-<div class="stat-item">
-<h3>Fast</h3>
-<p>Pengiriman Cepat</p>
-</div>
+        <div class="benefit-card">
 
-</div>
+          <div class="benefit-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
 
-</div>
+          <h3>Meningkatkan Imunitas</h3>
 
-<div class="hero-image">
+          <p>
+            Membantu meningkatkan daya tahan tubuh
+            agar tidak mudah sakit.
+          </p>
 
-<div class="hero-image-wrapper">
+        </div>
 
-<!-- GANTI DENGAN FOTO ASLI -->
-<img src="images/bawang-lanang.jpg"
-alt="Bawang Lanang Lokal"
-class="main-img">
+        <div class="benefit-card">
 
-<div class="hero-product-badge">
-100%<br>
-PRODUK LOKAL
-</div>
+          <div class="benefit-icon">
+            <i class="fas fa-fire"></i>
+          </div>
 
-<div class="floating-card card-1">
+          <h3>Anti Inflamasi</h3>
 
-<div class="icon-circle"
-style="background:linear-gradient(135deg,#d4a017,#f1c453);">
-<i class="fas fa-leaf"></i>
-</div>
+          <p>
+            Membantu mengurangi peradangan
+            dan menjaga kesehatan tubuh.
+          </p>
 
-<div>
-<h4>Alami</h4>
-<p>Tanpa Pengawet</p>
-</div>
+        </div>
 
-</div>
+      </div>
 
-<div class="floating-card card-2">
+    </div>
 
-<div class="icon-circle"
-style="background:linear-gradient(135deg,#1f5f1f,#347834);">
-<i class="fas fa-truck-fast"></i>
-</div>
+  </section>
 
-<div>
-<h4>Grosir & Eceran</h4>
-<p>Pengiriman Cepat</p>
-</div>
-
-</div>
-
-<div class="local-highlight">
-<i class="fas fa-seedling"></i>
-Langsung dari Petani Lokal
-</div>
-
-<div class="grosir-box">
-<h4>🧄 Tersedia Grosir & Eceran</h4>
-<p>
-Kemasan aman, kualitas premium,
-cocok untuk rumah tangga dan usaha kuliner
-</p>
-</div>
-
-<div class="hero-marketplace" id="marketplace">
-
-<h4>🛒 Lihat Marketplace Kami</h4>
-
-<a href="https://linktr.ee/grosirbawanglanang"
-target="_blank"
-class="marketplace-link">
-https://linktr.ee/grosirbawanglanang
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-MANFAAT
-========================= -->
-
-<section id="manfaat">
-
-<div class="container">
-
-<div class="section-header">
-
-<div class="section-tag">
-🌿 Khasiat & Manfaat
-</div>
-
-<h2>
-Khasiat Bawang Lanang untuk Kesehatan
-</h2>
-
-<p>
-Bawang tunggal dikenal kaya kandungan allicin,
-antioksidan, dan senyawa alami yang baik untuk kesehatan tubuh.
-</p>
-
-</div>
-
-<div class="benefits-grid">
-
-<div class="benefit-card">
-<div class="benefit-icon">
-<i class="fas fa-heart-pulse"></i>
-</div>
-<h3>Menjaga Jantung</h3>
-<p>
-Membantu menjaga kesehatan jantung dan sirkulasi darah.
-</p>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">
-<i class="fas fa-shield-virus"></i>
-</div>
-<h3>Meningkatkan Imunitas</h3>
-<p>
-Membantu meningkatkan daya tahan tubuh agar tidak mudah sakit.
-</p>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">
-<i class="fas fa-fire"></i>
-</div>
-<h3>Anti Radang</h3>
-<p>
-Memiliki sifat anti inflamasi alami untuk membantu kesehatan tubuh.
-</p>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">
-<i class="fas fa-bacteria"></i>
-</div>
-<h3>Anti Bakteri</h3>
-<p>
-Membantu melawan bakteri dan menjaga kesehatan tubuh.
-</p>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">
-<i class="fas fa-droplet"></i>
-</div>
-<h3>Melancarkan Darah</h3>
-<p>
-Membantu menjaga sirkulasi darah tetap lancar.
-</p>
-</div>
-
-<div class="benefit-card">
-<div class="benefit-icon">
-<i class="fas fa-staff-snake"></i>
-</div>
-<h3>Menjaga Kolesterol</h3>
-<p>
-Baik dikonsumsi secara rutin sebagai pendukung pola hidup sehat.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-KHASIAT TAMBAHAN
-========================= -->
-
-<section class="features" id="khasiat">
-
-<div class="container">
-
-<div class="section-header">
-
-<div class="section-tag">
-⭐ Keunggulan Produk
-</div>
-
-<h2>
-Mengapa Memilih Bawang Lanang Kami?
-</h2>
+  <!-- ================= KHASIAT ================= -->
 
-<p>
-Produk pilihan dengan kualitas premium langsung dari petani lokal.
-</p>
+  <section class="khasiat" id="khasiat">
 
-</div>
+    <div class="container">
 
-<div class="features-grid">
+      <div class="section-header">
 
-<div class="feature-item">
-<div class="feature-emoji">🌱</div>
-<h3>100% Lokal</h3>
-<p>Langsung dari petani pilihan Indonesia.</p>
-</div>
+        <div class="section-tag">
+          🧄 Khasiat Tambahan
+        </div>
 
-<div class="feature-item">
-<div class="feature-emoji">🧄</div>
-<h3>Kualitas Premium</h3>
-<p>Kering, utuh, dan beraroma tajam.</p>
-</div>
+        <h2>
+          Khasiat Bawang Lanang Lokal
+        </h2>
 
-<div class="feature-item">
-<div class="feature-emoji">🚚</div>
-<h3>Pengiriman Cepat</h3>
-<p>Dikirim dengan kemasan aman dan rapi.</p>
-</div>
+        <p>
+          Cocok dikonsumsi rutin untuk membantu menjaga kesehatan tubuh sehari-hari.
+        </p>
 
-<div class="feature-item">
-<div class="feature-emoji">🏪</div>
-<h3>Grosir & Eceran</h3>
-<p>Cocok untuk reseller dan kebutuhan rumah tangga.</p>
-</div>
+      </div>
 
-<div class="feature-item">
-<div class="feature-emoji">🌿</div>
-<h3>Tanpa Campuran</h3>
-<p>Bawang tunggal alami tanpa bahan pengawet.</p>
-</div>
+      <div class="khasiat-grid">
 
-<div class="feature-item">
-<div class="feature-emoji">🥗</div>
-<h3>Cocok untuk Kuliner</h3>
-<p>Menambah aroma dan cita rasa masakan.</p>
-</div>
+        <div class="khasiat-item">
+          <div class="emoji">💪</div>
+          <h4>Daya Tahan Tubuh</h4>
+          <p>Membantu meningkatkan imun tubuh.</p>
+        </div>
 
-<div class="feature-item">
-<div class="feature-emoji">💪</div>
-<h3>Baik untuk Kesehatan</h3>
-<p>Membantu menjaga daya tahan tubuh.</p>
-</div>
+        <div class="khasiat-item">
+          <div class="emoji">❤️</div>
+          <h4>Kesehatan Jantung</h4>
+          <p>Membantu menjaga kesehatan jantung.</p>
+        </div>
 
-<div class="feature-item">
-<div class="feature-emoji">❤️</div>
-<h3>Disukai Pelanggan</h3>
-<p>Kualitas terpercaya dan banyak pelanggan repeat order.</p>
-</div>
+        <div class="khasiat-item">
+          <div class="emoji">🩸</div>
+          <h4>Peredaran Darah</h4>
+          <p>Membantu melancarkan sirkulasi darah.</p>
+        </div>
 
-</div>
+        <div class="khasiat-item">
+          <div class="emoji">🦠</div>
+          <h4>Anti Bakteri</h4>
+          <p>Memiliki kandungan anti bakteri alami.</p>
+        </div>
 
-</div>
+        <div class="khasiat-item">
+          <div class="emoji">🔥</div>
+          <h4>Anti Radang</h4>
+          <p>Membantu mengurangi inflamasi tubuh.</p>
+        </div>
 
-</section>
+        <div class="khasiat-item">
+          <div class="emoji">🥗</div>
+          <h4>Kesehatan Pencernaan</h4>
+          <p>Membantu menjaga sistem pencernaan.</p>
+        </div>
 
-<!-- =========================
-CTA
-========================= -->
+        <div class="khasiat-item">
+          <div class="emoji">🦴</div>
+          <h4>Kesehatan Tulang</h4>
+          <p>Kaya kandungan mineral alami.</p>
+        </div>
 
-<section class="cta">
+        <div class="khasiat-item">
+          <div class="emoji">🌿</div>
+          <h4>100% Alami</h4>
+          <p>Tanpa pengawet dan tanpa campuran kimia.</p>
+        </div>
 
-<div class="container">
+      </div>
 
-<h2>
-🧄 Mau Order Bawang Lanang Premium?
-</h2>
+    </div>
 
-<p>
-Klik marketplace kami sekarang dan pilih produk bawang lanang lokal berkualitas terbaik.
-</p>
+  </section>
 
-<a href="https://linktr.ee/grosirbawanglanang"
-target="_blank"
-class="btn-cta">
+  <!-- ================= CTA ================= -->
 
-<i class="fas fa-cart-shopping"></i>
-Kunjungi Marketplace
+  <section class="cta" id="kontak">
 
-</a>
+    <div class="container">
 
-</div>
+      <h2>
+        🧄 Mulai Hidup Sehat dengan Bawang Lanang
+      </h2>
 
-</section>
+      <p>
+        Tersedia grosir dan eceran dengan kualitas premium pilihan.
+      </p>
 
-<!-- =========================
-FOOTER
-========================= -->
+      <a
+        href="https://linktr.ee/grosirbawanglanang"
+        target="_blank"
+        class="btn-cta"
+      >
+        <i class="fas fa-cart-shopping"></i>
+        Kunjungi Marketplace
+      </a>
 
-<footer class="footer" id="kontak">
+    </div>
 
-<div class="container">
+  </section>
 
-<div class="footer-grid">
+  <!-- ================= FOOTER ================= -->
 
-<div>
+  <footer>
 
-<div class="logo">
-Bawang<span>Lanang</span>
-</div>
+    <div class="container">
 
-<br>
+      <div class="footer-grid">
 
-<p>
-Menyediakan bawang tunggal / bawang lanang lokal berkualitas premium
-langsung dari petani pilihan Indonesia.
-</p>
+        <div>
 
-</div>
+          <div class="logo">
+            Bawang<span>Lanang</span>
+          </div>
 
-<div>
+          <p style="margin-top:15px; line-height:1.8;">
+            Menyediakan bawang tunggal / bawang lanang lokal berkualitas premium,
+            langsung dari petani pilihan Indonesia.
+          </p>
 
-<h4>Menu</h4>
+          <div class="footer-social">
 
-<ul>
-<li><a href="#manfaat">Manfaat</a></li>
-<li><a href="#khasiat">Khasiat</a></li>
-<li><a href="#marketplace">Marketplace</a></li>
-</ul>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
 
-</div>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-<div>
+            <a href="#">
+              <i class="fab fa-tiktok"></i>
+            </a>
 
-<h4>Marketplace</h4>
+          </div>
 
-<ul>
-<li>
-<a href="https://linktr.ee/grosirbawanglanang" target="_blank">
-Linktree Marketplace
-</a>
-</li>
-</ul>
+        </div>
 
-</div>
+        <div>
 
-</div>
+          <h4>Menu</h4>
 
-<div class="footer-bottom">
-© 2026 Bawang Lanang Lokal Premium
-</div>
+          <ul>
+            <li><a href="#manfaat">Manfaat</a></li>
+            <li><a href="#khasiat">Khasiat</a></li>
+            <li><a href="#marketplace">Marketplace</a></li>
+          </ul>
 
-</div>
+        </div>
 
-</footer>
+        <div>
 
-<!-- =========================
-WHATSAPP FLOAT
-========================= -->
+          <h4>Marketplace</h4>
 
-<a href="https://linktr.ee/grosirbawanglanang"
-target="_blank"
-class="wa-float">
+          <ul>
+            <li>
+              <a
+                href="https://linktr.ee/grosirbawanglanang"
+                target="_blank"
+              >
+                Linktree Marketplace
+              </a>
+            </li>
 
-<i class="fab fa-whatsapp"></i>
+            <li>Grosir & Eceran</li>
+            <li>Pengiriman Seluruh Indonesia</li>
 
-</a>
+          </ul>
 
-<!-- =========================
-JAVASCRIPT
-========================= -->
+        </div>
 
-<script>
+      </div>
 
-function toggleNav(){
-  document
-  .getElementById('navLinks')
-  .classList
-  .toggle('active');
-}
+      <div class="footer-bottom">
+        © 2026 Bawang Lanang Lokal Premium
+      </div>
 
-</script>
+    </div>
+
+  </footer>
+
+  <!-- ================= WHATSAPP FLOAT ================= -->
+
+  <a
+    href="https://wa.me/"
+    class="wa-float"
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ================= JS ================= -->
+
+  <script>
+
+    function toggleNav(){
+      document
+      .getElementById('navLinks')
+      .classList
+      .toggle('active');
+    }
+
+  </script>
 
 </body>
 </html>
